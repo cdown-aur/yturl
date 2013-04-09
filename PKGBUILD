@@ -1,3 +1,5 @@
+# Maintainer: Chris Down <chris@chrisdown.name>
+
 pkgname="yturl"
 pkgver=1.13.0
 pkgrel=1
