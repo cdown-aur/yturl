@@ -5,9 +5,14 @@ pkgrel=$2
 
 [[ $pkgver && $pkgrel ]] || exit 1
 
-git clean -dfx
-
 tag="$pkgver-$pkgrel"
+
+if git show "$tag" &>/dev/null; then
+    printf 'fatal: tag "%s" already exists\n' "$tag"
+    exit 1
+fi
+
+git clean -dfx
 
 sed -i \
     -e "s|^pkgver=.*|pkgver=$pkgver|" \
