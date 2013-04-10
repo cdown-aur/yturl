@@ -8,13 +8,14 @@ pkgrel=$2
 git clean -dfx
 
 tag="$pkgver-$pkgrel"
-md5sums=$(makepkg -g)
 
 sed -i \
     -e "s|^pkgver=.*|pkgver=$pkgver|" \
     -e "s|^pkgrel=.*|pkgrel=$pkgrel|" \
-    -e "s|^md5sums=.*|$md5sums|" \
         PKGBUILD
+
+md5sums=$(makepkg -g)
+sed -i -e "s|^md5sums=.*|$md5sums|" PKGBUILD
 
 makepkg -s
 makepkg --source
