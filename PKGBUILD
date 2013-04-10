@@ -11,7 +11,7 @@ depends=( "python2" )
 source=(
     "https://github.com/cdown/yturl/archive/v${pkgver}.zip"
 )
-md5sums=("a8159ed73ef0640b0b408fc9d0617f78")
+md5sums=('a8159ed73ef0640b0b408fc9d0617f78')
 
 package() {
     install -D -m755 \

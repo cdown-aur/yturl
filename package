@@ -5,10 +5,10 @@ pkgrel=$2
 
 [[ $pkgver && $pkgrel ]] || exit 1
 
+git clean -dfx
+
 tag="$pkgver-$pkgrel"
 md5sums=$(makepkg -g)
-
-git clean -dfx
 
 sed -i \
     -e "s|^pkgver=.*|pkgver=$pkgver|" \
