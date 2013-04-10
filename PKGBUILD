@@ -1,7 +1,7 @@
 # Maintainer: Chris Down <chris@chrisdown.name>
 
 pkgname="yturl"
-pkgver=1.13.0
+pkgver=1.13.1
 pkgrel=1
 pkgdesc="Get direct media URLs to YouTube videos"
 url="http://github.com/cdown/yturl"
@@ -12,7 +12,7 @@ source=(
     "https://github.com/cdown/yturl/archive/v${pkgver}.zip"
 )
 md5sums=(
-    "efe6ea4f2ac24bf2d0db5bd1bfe274e8"
+    "a8159ed73ef0640b0b408fc9d0617f78"
 )
 
 package() {
