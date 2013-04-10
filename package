@@ -22,8 +22,8 @@ sed -i \
 md5sums=$(makepkg -g)
 sed -i -e "s|^md5sums=.*|$md5sums|" PKGBUILD
 
-git tag -a "$tag" -m "$tag"
 git commit -am "Release: $tag"
+git tag -a "$tag" -m "$tag"
 
 makepkg -s
 makepkg --source
