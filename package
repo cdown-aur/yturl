@@ -27,3 +27,9 @@ git commit -am "Release: $tag"
 
 makepkg -s
 makepkg --source
+
+cat << EOF
+burp *.src.tar.gz
+git push origin HEAD
+git push origin $tag
+EOF
